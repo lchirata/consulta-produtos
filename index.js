@@ -8,7 +8,7 @@ let api = require('./routes/api');
 
 app.get('/', (req, res) => res.send('Larissa Hirata - ST IT Cloud - Development Test LV. 3'))
 
-app.listen(3000);
+app.listen(process.env.PORT);
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
