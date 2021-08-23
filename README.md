@@ -3,9 +3,10 @@
 
 ## Instruções para instalacão e execucão da API
 
-  - npm i
+  - npm i (bibliotécas utilizadas: express, jwt, fs, nodemon)
   - npm start
-  - definir palavra chave no .env (SECRET=XXX)
+  - definir palavra chave no arquivo .env (SECRET=XXX)
+  - definir porta no arquivo .env (PORT=XXX)
   
 
 ## Enpoints 
