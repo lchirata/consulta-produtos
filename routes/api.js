@@ -2,14 +2,9 @@ const express = require('express');
 const router = express.Router();
 require("dotenv-safe").config();
 const jwt = require('jsonwebtoken');
-const fs = require("fs");
-const readline = require('readline');
 const users = require("../fixtures/users.json")
 const organization = require("../fixtures/organization.json");
-const { strict } = require('assert');
 let role = ""
-
-
 
 //authentication
 router.post('/login', (req, res, next) => {
@@ -23,12 +18,11 @@ router.post('/login', (req, res, next) => {
       const token = jwt.sign({ id, role }, process.env.SECRET, {
         expiresIn: 3600 // 1h
       });
-      return res.json({ auth: true, token: token, roles: user.roles[0], userId: user.userId });
+      return res.json({ token: token });
     }else{
         res.status(500).json({message: 'Login inválido!'});
     }
 })
-
 //authorization
 function verifyJWT(req, res, next){
     const token = req.headers['x-access-token'];
@@ -43,7 +37,7 @@ function verifyJWT(req, res, next){
       next();
     });
 }
-
+//get products
 router.get('/products/:organizationName', verifyJWT, (req, res, next) => { 
     let organizationName = req.query.organizationName
     let tag = req.query.tag
