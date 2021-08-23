@@ -4,7 +4,7 @@
 ## Instruções para instalacão e execucão da API
 
   - npm i
-  - nodemon
+  - npm start
   - definir palavra chave no .env (SECRET=XXX)
   
 
