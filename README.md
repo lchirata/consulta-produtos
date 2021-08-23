@@ -25,7 +25,7 @@
   - Query : organizationName (exemplo: STUFF A)
   - tag (opicional) : tag (exeplo: Intelligent)
 
-  --> exemplo de url : http://localhost:3000/products/:organizationName?organizationName=STUFF%20A&tag=Intelligent&tag=Awesome
+  --> exemplo de url : https://talent-data-api-lhirata.herokuapp.com//products/:organizationName?organizationName=STUFF%20A&tag=Intelligent&tag=Awesome
 
 
 ## Requisitos não-funcionais 
