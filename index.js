@@ -6,7 +6,7 @@ let bodyParser = require('body-parser');
 app.use(cors())
 let api = require('./routes/api');
 
-// app.get('/', (req, res) => res.send('Larissa Hirata - ST IT Cloud - Development Test LV. 3'))
+app.get('/', (req, res) => res.send('Larissa Hirata - ST IT Cloud - Development Test LV. 3'))
 
 app.listen(3000);
 
